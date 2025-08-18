@@ -1,0 +1,243 @@
+body, figure {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.hero,.tema, .carrusel-contenedor,nav ul, footer, .footer-redes ul, .footer-redes a { 
+    display: flex;
+ }
+
+a {
+    text-decoration: none;
+}
+
+
+/* ----- HERO HEADER ----- */
+.hero {
+  background-color: #095203;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+/* ----- NAV MENU ----- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  border: 2px solid #459f38;
+  background-color: #ffffff;
+  color: #012808;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Hover en menú principal */
+.menu a:hover {
+  background-color: #1c7f13;
+  color: white;
+  border-color: #ccc;
+  transform: scale(1.05);
+}
+
+/* ----- SUBMENU (Dropdown) ----- */
+.menu-principal li {
+  position: relative;
+}
+
+.menu-secundario {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 9999;
+}
+
+.menu-secundario li {
+  margin: 0;
+}
+
+.menu-secundario a {
+  padding: 10px 15px;
+  margin: 0;
+  background: none;
+  border: none;
+  color: #1c7f13;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.menu-secundario a:hover {
+  background-color: #eaf7e8;
+  color: #000;
+}
+
+/* Mostrar el submenú */
+.menu:hover > .menu-secundario {
+  display: block;
+}
+
+/* ----- SEGUNDA SECCIÓN HERO ----- */
+.hero2 {
+  background-color: #1f7412;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 80px 20px;
+  margin-top: 80px;
+}
+
+.hero2 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero2 p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+main {
+    background-color: #c1ffa8;
+}
+
+.caja-falsa { 
+    height: 40px;
+ }
+
+.tema {
+    box-shadow: 0 8px 18px rgb(120, 230, 98);
+    border-radius: 25px;
+    margin: 40px;
+}
+
+.sub-tema {
+    margin: 60px;
+}
+
+.tema-img {
+    width: 400px;
+    height: 308px;
+    padding: 30px 0px;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px 100px 100px 100px;
+    overflow: hidden;
+    margin-left: 179px;
+    margin-bottom: 0px;
+}
+
+.carrusel-contenedor {
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel figure {
+    min-width: 25%; 
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+
+.carrusel img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #1c7f13;
+    background: white;
+}
+
+.carrusel-contenedor figure h3 {
+    font: size 1.75rem;
+    color: black;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.btn:hover {
+    background: #1c7f13;
+}
+
+footer {
+  background-color: #1c7f13;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.footer-redes ul {
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+}
+
+.footer-redes a {
+  color: white;
+  font-size: 1.2rem;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #ffd700; /* Amarillo al pasar el mouse */
+}
+
+.footer-redes i {
+  font-size: 1.4rem;
+}
