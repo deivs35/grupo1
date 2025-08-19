@@ -1,5 +1,5 @@
 const carrusel = document.getElementById("carrusel");
-const visibles = 4; // imágenes visibles
+const visibles = 5; // imágenes visibles
 let indice = visibles;
 
 // Guardamos los originales antes de clonar
@@ -39,3 +39,26 @@ function mover(direccion) {
     { once: true }
   );
 }
+
+const btnSi = document.getElementById("si");
+const btnNo = document.getElementById("no");
+
+// Acción al hacer clic en "Sí"
+btnSi.addEventListener("click", () => {
+  alert("Gracias por tu buena decisión 🤗");
+});
+
+// Cuando el mouse pasa sobre "No", se mueve a un lugar aleatorio
+btnNo.addEventListener("mouseover", () => {
+  const x = Math.floor(Math.random() * window.innerWidth - 100);
+  const y = Math.floor(Math.random() * window.innerHeight - 100);
+  btnNo.style.left = `${x}px`;
+  btnNo.style.top = `${y}px`;
+});
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});

@@ -1,4 +1,5 @@
-body, figure {
+body,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -9,12 +10,19 @@ body, figure {
   font-size: 16px;
 }
 
-.hero,.tema, .carrusel-contenedor,nav ul, footer, .footer-redes ul, .footer-redes a { 
-    display: flex;
- }
+.hero,
+.tema,
+.tema_rev,
+.carrusel-contenedor,
+nav ul,
+footer,
+.footer-redes ul,
+.footer-redes a {
+  display: flex;
+}
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -102,7 +110,7 @@ nav ul {
 }
 
 /* Mostrar el submenú */
-.menu:hover > .menu-secundario {
+.menu:hover>.menu-secundario {
   display: block;
 }
 
@@ -130,81 +138,133 @@ nav ul {
 
 
 main {
-    background-color: #c1ffa8;
+  background-color: #c1ffa8;
 }
 
-.caja-falsa { 
-    height: 40px;
- }
+.caja-falsa {
+  height: 40px;
+}
 
-.tema {
-    box-shadow: 0 8px 18px rgb(120, 230, 98);
-    border-radius: 25px;
-    margin: 40px;
+.tema,
+.tema_rev {
+  box-shadow: 0 8px 18px rgb(120, 230, 98);
+  border-radius: 25px;
+  margin: 40px;
 }
 
 .sub-tema {
-    margin: 60px;
+  margin: 60px;
 }
 
 .tema-img {
-    width: 400px;
-    height: 308px;
-    padding: 30px 0px;
+  width: 400px;
+  height: 308px;
+  padding: 30px 0px;
 }
 
 .carrusel {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 50px 100px 100px 100px;
-    overflow: hidden;
-    margin-left: 179px;
-    margin-bottom: 0px;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px 100px 100px 100px;
+  overflow: hidden;
+  margin: 50px auto;
+  margin-bottom: 0px;
 }
 
 .carrusel-contenedor {
-    transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carrusel figure {
-    min-width: 25%; 
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 0;
+  min-width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
 }
 
 .carrusel img {
-    width: 100%;
-    border-radius: 10px;
-    border: 3px solid #1c7f13;
-    background: white;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #1c7f13;
+  background: white;
 }
 
 .carrusel-contenedor figure h3 {
-    font: size 1.75rem;
-    color: black;
-    text-align: center;
+  font: size 1.75rem;
+  color: black;
+  text-align: center;
 }
 
 .btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
 
 .btn:hover {
-    background: #1c7f13;
+  background: #1c7f13;
+}
+
+.juego {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+}
+
+.juego h1 {
+  font-size: 2.5rem;
+  color: #1f4ce0;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px #00000055;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.boton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#si {
+  background-color: #28a745;
+  color: white;
+
+}
+
+#no {
+  background-color: #dc3545;
+  color: white;
+  position: absolute;
+  right: 10%;
+  width: 133.31px;
+  height: 56.67px;
 }
 
 footer {
@@ -235,9 +295,80 @@ footer p {
 }
 
 .footer-redes a:hover {
-  color: #ffd700; /* Amarillo al pasar el mouse */
+  color: #ffd700;
+  /* Amarillo al pasar el mouse */
 }
 
 .footer-redes i {
   font-size: 1.4rem;
+}
+
+/* Para pantallas pequeñas (480px o menos) */
+@media screen and (max-width: 480px) {
+
+  
+
+  nav {
+    display: none;
+    /* oculto el menú al inicio */
+    flex-direction: column;
+    background: #1c7f13;
+    position: absolute;
+    top: 80px;
+    /* debajo del header */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  nav.active {
+    display: flex;
+    /* se muestra al activar */
+  }
+
+  .menu-pricipal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  /* botón hamburguesa visible en móviles */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .tema {
+    flex-direction: column;
+  }
+
+  .tema_rev {
+    flex-direction: column-reverse;
+  }
+
+  .tema-img {
+    width: 400px;
+    height: 308px;
+    padding: 0px 30px;
+  }
+
+  .carrusel-contenedor figure {
+    flex: 0 0 100%;
+    padding: 0%;
+  }
+
+  .carrusel img {
+    max-width: 160px;
+  }
+
 }

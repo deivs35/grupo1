@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📑Normas Apa📃</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -63,7 +63,7 @@
                         <source src="./assets/video/punto_dos.mp4" type="video/mp4">
                     </video></figure>
             </div>
-            <div id="tema2" class="tema">
+            <div id="tema2" class="tema_rev">
                 <figure><video class="tema-img" controls poster="./assets/estructura_del_trabajo.png">
                         <source src="./assets/video/punto_dos.mp4" type="video/mp4">
                     </video></figure>
@@ -108,7 +108,7 @@
                         <source src="./assets/video/punto_dos.mp4" type="video/mp4">
                     </video></figure>
             </div>
-            <div id="tema4" class="tema">
+            <div id="tema4" class="tema_rev">
                 <figure><video class="tema-img" controls poster="./assets/referencias.png">
                         <source src="./assets/video/punto_dos.mp4" type="video/mp4">
                     </video></figure>
@@ -167,20 +167,28 @@
             <button class="btn prev" onclick="mover(-1)">&#10094;</button>
             <button class="btn next" onclick="mover(1)">&#10095;</button>
         </section>
+        <section class="juego">
+            <h1>¿Que te parecio el trabajo? 😎</h1>
+            <div class="botones">
+                <button id="si" class="boton">Bueno 😁</button>
+                <button id="no" class="boton">Malo 😣</button>
+            </div>
+
+        </section>
     </main>
     <footer>
-  <div class="footer-info">
-    <p>© 2023 Normas APA. Todos los derechos reservados.</p>
-    <p>Desarrollado por [Tu Nombre]</p>
-  </div>
-  <div class="footer-redes">
-    <ul>
-      <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-      <li><a href="" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-      <li><a href="" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-    </ul>
-  </div>
-</footer>
+        <div class="footer-info">
+            <p>© 2023 Normas APA. Todos los derechos reservados.</p>
+            <p>Desarrollado por [Tu Nombre]</p>
+        </div>
+        <div class="footer-redes">
+            <ul>
+                <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
