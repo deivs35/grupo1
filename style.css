@@ -353,8 +353,9 @@ footer p {
     display: block; /* Botón visible en móviles */
   }
 
-  .menu-pricipal.activo {
-  display: flex;
+  #menu.activo {
+    display: flex; /* Se muestra cuando tiene la clase activo */
+    flex-direction: column;
   }
 
   .tema, .tema_rev {

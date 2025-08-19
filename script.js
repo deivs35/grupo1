@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const btnHamburguesa = document.getElementById("hamburguesa");
+  const menu = document.getElementById("menu");
+
+  btnHamburguesa.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+  });
+});
+
 const carrusel = document.getElementById("carrusel");
 
 // Detectar cuántas imágenes mostrar según el ancho de pantalla
@@ -63,16 +72,16 @@ btnSi.addEventListener("click", () => {
 });
 
 // Cuando el mouse pasa sobre "No", se mueve a un lugar aleatorio
-btnNo.addEventListener("mouseover", () => {
+btnNo.addEventListener("click", () => {
   const x = Math.floor(Math.random() * window.innerWidth - 100);
   const y = Math.floor(Math.random() * window.innerHeight - 100);
   btnNo.style.left = `${x}px`;
   btnNo.style.top = `${y}px`;
 });
 
-const toggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav");
+const btnHamburguesa = document.getElementById("btnHamburguesa");
+const menu = document.getElementById("menu");
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
+btnHamburguesa.addEventListener("click", () => {
+  menu.classList.toggle("activo");
 });
