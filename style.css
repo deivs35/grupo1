@@ -392,7 +392,8 @@ footer p {
 
   .tema figure,
   .tema_rev figure {
-    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 
   .carrusel-contenedor figure {
