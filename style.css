@@ -306,7 +306,9 @@ footer p {
 /* Para pantallas pequeñas (480px o menos) */
 @media screen and (max-width: 480px) {
 
-  
+ .hero {
+  justify-content: space-between;
+ }
 
   nav {
     display: none;
@@ -348,6 +350,11 @@ footer p {
     padding: 10px;
   }
 
+  .tema, .tema_rev {
+    background: #ffffff;
+    padding-bottom: 10px;
+  }
+
   .tema {
     flex-direction: column;
   }
@@ -369,6 +376,15 @@ footer p {
 
   .carrusel img {
     max-width: 160px;
+  }
+
+  .juego {
+    height:400px;
+  }
+
+  #si {
+    position: absolute;
+    left: 100px;
   }
 
 }
