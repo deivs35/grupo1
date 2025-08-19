@@ -114,13 +114,22 @@ nav ul {
   display: block;
 }
 
+.hamburguesa {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 /* ----- SEGUNDA SECCIÓN HERO ----- */
 .hero2 {
   background-color: #1f7412;
   color: white;
   text-align: center;
   font-weight: bold;
-  padding: 80px 20px;
+  padding: 40px 20px;
   margin-top: 80px;
 }
 
@@ -153,7 +162,11 @@ main {
 }
 
 .sub-tema {
-  margin: 60px;
+  margin: 60px 60px 20px 60px ;
+}
+
+.sub-tema h2 {
+  text-align: center;
 }
 
 .tema-img {
@@ -339,7 +352,7 @@ footer p {
   }
 
   /* botón hamburguesa visible en móviles */
-  .menu-toggle {
+  .hamburguesa {
     display: block;
     font-size: 2rem;
     background: none;

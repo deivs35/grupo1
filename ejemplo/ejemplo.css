@@ -1,0 +1,43 @@
+/* --- Menú hamburguesa solo visible en móviles --- */
+.hamburguesa {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsivo hasta 480px */
+@media (max-width: 480px) {
+  .menu-pricipal {
+    display: none; /* Se esconde el menú por defecto */
+    flex-direction: column;
+    background: #1c7f13;
+    position: absolute;
+    top: 60px; /* debajo del nav */
+    right: 10px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .menu-pricipal li {
+    margin: 10px 0;
+  }
+
+  .hamburguesa {
+    display: block; /* Aparece el botón hamburguesa */
+  }
+
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+/* Clase activa para mostrar el menú */
+.menu-pricipal.activo {
+  display: flex;
+}

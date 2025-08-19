@@ -63,3 +63,6 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
+document.getElementById("hamburguesa").addEventListener("click", function() {
+  document.getElementById("menu").classList.toggle("activo");
+});
