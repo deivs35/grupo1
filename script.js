@@ -30,7 +30,7 @@ let figuras = carrusel.children.length;
 
 // 👉 Detectar si cambia el tamaño de pantalla (ej: rotación móvil)
 window.addEventListener("resize", () => {
-  const nuevoVisibles = window.innerWidth <= 480 ? 1 : 4;
+  const nuevoVisibles = window.innerWidth <= 600 ? 1 : 4;
   if (nuevoVisibles !== visibles) {
     location.reload(); // recarga la página para rearmar el carrusel
   }
