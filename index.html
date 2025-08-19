@@ -18,12 +18,12 @@
 
              <button class="hamburguesa" id="hamburguesa">&#9776;</button>
 
-            <nav>
-                <ul class="menu-principal" id="menu">
+            <nav id="menu">
+                <ul class="menu-principal" >
                     <li class="menu"><a href="#inicio">Inicio</a></li>
                     <li class="menu">
-                        <a href="normas.html">Normas ▾</a>
-                        <ul class="menu-secundario">
+                        <a href="#sub-menu">Normas ▾</a>
+                        <ul class="menu-secundario" id="sub-menu">
                             <li class="sub-menu"><a href="#tema1">Formato del documento</a></li>
                             <li class="sub-menu"><a href="#tema2">Estructura del trabajo</a></li>
                             <li class="sub-menu"><a href="#tema3">Citas de texto</a></li>
@@ -47,8 +47,8 @@
 
     <main>
         <section>
-            <div class="caja-falsa"></div>
-            <div id="tema1" class="tema">
+            <div class="caja-falsa" id="tema1"></div>
+            <div  class="tema">
                 <div class="sub-tema">
                     <h2>FORMATO DEL DOCUMENTO</h2>
                     <ul>
@@ -62,7 +62,7 @@
                     </ul>
                 </div>
                 <figure><video class="tema-img" controls poster="./assets/formato_del_documento.png">
-                        <source src="./assets/video/punto_dos.mp4" type="video/mp4">
+                        <source src="./assets/video/formato_documento.mp4" type="video/mp4">
                     </video></figure>
             </div>
             <div id="tema2" class="tema_rev">
@@ -107,12 +107,12 @@
                     </ul>
                 </div>
                 <figure><video class="tema-img" controls poster="./assets/citas_texto.png">
-                        <source src="./assets/video/punto_dos.mp4" type="video/mp4">
+                        <source src="./assets/video/cita_textos.mp4" type="video/mp4">
                     </video></figure>
             </div>
             <div id="tema4" class="tema_rev">
                 <figure><video class="tema-img" controls poster="./assets/referencias.png">
-                        <source src="./assets/video/punto_dos.mp4" type="video/mp4">
+                        <source src="./assets/video/refencias.mp4" type="video/mp4">
                     </video></figure>
                 <div class="sub-tema">
                     <h2>REFERENCIAS</h2>
@@ -138,7 +138,7 @@
                     </ul>
                 </div>
                 <figure><video class="tema-img" controls poster="./assets/lenguaje_academico.png">
-                        <source src="./assets/video/punto_dos.mp4" type="video/mp4">
+                        <source src="./assets/video/lenguaje_academico.mp4" type="video/mp4">
                     </video></figure>
             </div>
         </section>

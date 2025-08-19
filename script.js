@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   btnHamburguesa.addEventListener("click", () => {
     menu.classList.toggle("activo");
   });
+  for (const link of menuLinks) {
+  link.addEventListener("click", () => {
+    menu.classList.remove("activo");
+  });
+}
+
 });
 
 const carrusel = document.getElementById("carrusel");
@@ -77,11 +83,4 @@ btnNo.addEventListener("click", () => {
   const y = Math.floor(Math.random() * window.innerHeight - 100);
   btnNo.style.left = `${x}px`;
   btnNo.style.top = `${y}px`;
-});
-
-const btnHamburguesa = document.getElementById("btnHamburguesa");
-const menu = document.getElementById("menu");
-
-btnHamburguesa.addEventListener("click", () => {
-  menu.classList.toggle("activo");
 });
