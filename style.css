@@ -115,12 +115,12 @@ nav ul {
 }
 
 .hamburguesa {
-  display: none;
-  font-size: 28px;
+  display: none; /* Oculto en escritorio */
+  font-size: 24px;
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
+  color: #ffffff;
 }
 
 /* ----- SEGUNDA SECCIÓN HERO ----- */
@@ -190,7 +190,7 @@ main {
 }
 
 .carrusel figure {
-  min-width: 20%;
+  min-width: 25%;
   box-sizing: border-box;
   padding: 10px;
   margin: 0;
@@ -317,7 +317,7 @@ footer p {
 }
 
 /* Para pantallas pequeñas (480px o menos) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
 
  .hero {
   justify-content: space-between;
@@ -327,23 +327,20 @@ footer p {
     display: none;
     /* oculto el menú al inicio */
     flex-direction: column;
-    background: #1c7f13;
+    background: white;
     position: absolute;
-    top: 80px;
-    /* debajo del header */
-    left: 0;
-    width: 100%;
+    top: 60px;   /* debajo del header */
+    right: 10px;
     padding: 10px;
+    border: 1px solid #ccc;
   }
 
-  nav.active {
-    display: flex;
-    /* se muestra al activar */
+  #menu.activo {
+    display: flex; /* Se muestra cuando tiene la clase activo */
   }
 
   .menu-pricipal {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .menu {
@@ -353,14 +350,11 @@ footer p {
 
   /* botón hamburguesa visible en móviles */
   .hamburguesa {
-    display: block;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-    padding: 10px;
+    display: block; /* Botón visible en móviles */
+  }
+
+  .menu-pricipal.activo {
+  display: flex;
   }
 
   .tema, .tema_rev {
@@ -387,9 +381,7 @@ footer p {
     padding: 0%;
   }
 
-  .carrusel img {
-    max-width: 160px;
-  }
+ 
 
   .juego {
     height:400px;

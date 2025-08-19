@@ -1,5 +1,7 @@
 const carrusel = document.getElementById("carrusel");
-const visibles = 5; // imágenes visibles
+
+// Detectar cuántas imágenes mostrar según el ancho de pantalla
+let visibles = window.innerWidth <= 480 ? 1 : 4;
 let indice = visibles;
 
 // Guardamos los originales antes de clonar
@@ -9,10 +11,22 @@ const figurasOriginales = originales.length;
 // 👉 Clonar al inicio y al final
 for (let i = 0; i < visibles; i++) {
   carrusel.appendChild(originales[i].cloneNode(true)); // clones al final
-  carrusel.insertBefore(originales[figurasOriginales - 1 - i].cloneNode(true), carrusel.firstChild); // clones al inicio
+  carrusel.insertBefore(
+    originales[figurasOriginales - 1 - i].cloneNode(true),
+    carrusel.firstChild
+  ); // clones al inicio
 }
 
 let figuras = carrusel.children.length;
+
+// 👉 Detectar si cambia el tamaño de pantalla (ej: rotación móvil)
+window.addEventListener("resize", () => {
+  const nuevoVisibles = window.innerWidth <= 480 ? 1 : 4;
+  if (nuevoVisibles !== visibles) {
+    location.reload(); // recarga la página para rearmar el carrusel
+  }
+});
+
 
 // Ajustar posición inicial
 carrusel.style.transform = `translateX(${-indice * (100 / visibles)}%)`;
@@ -61,8 +75,4 @@ const nav = document.querySelector("nav");
 
 toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
-});
-
-document.getElementById("hamburguesa").addEventListener("click", function() {
-  document.getElementById("menu").classList.toggle("activo");
 });
