@@ -317,7 +317,7 @@ footer p {
 }
 
 /* Para pantallas pequeñas (480px o menos) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
  .hero {
   justify-content: space-between;
