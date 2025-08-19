@@ -380,6 +380,7 @@ footer p {
 
   .tema_rev {
     flex-direction: column-reverse;
+    padding-left: 0px;
   }
 
   .tema-img {
