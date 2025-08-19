@@ -372,17 +372,18 @@ footer p {
   }
 
   .tema-img {
-    width: 400px;
-    height: 308px;
+    width: 370px;
     padding: 0px 30px;
+  }
+
+   .tema, .tema_rev figure {
+    align-items: center;
   }
 
   .carrusel-contenedor figure {
     flex: 0 0 100%;
     padding: 0%;
   }
-
- 
 
   .juego {
     height:400px;
