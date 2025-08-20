@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   btnHamburguesa.addEventListener("click", () => {
     menu.classList.toggle("activo");
   });
-
-
 });
 
 const carrusel = document.getElementById("carrusel");
