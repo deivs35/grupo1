@@ -5,11 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btnHamburguesa.addEventListener("click", () => {
     menu.classList.toggle("activo");
   });
-  for (const link of menuLinks) {
-  link.addEventListener("click", () => {
-    menu.classList.remove("activo");
-  });
-}
+
 
 });
 
